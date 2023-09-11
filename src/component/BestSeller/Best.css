@@ -1,0 +1,40 @@
+.best-wrapper {
+  padding: 0 110px;
+}
+
+.topSec {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botSec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.botSec img {
+  max-width: 23%;
+}
+
+@media (max-width: 768px) {
+  .best-wrapper {
+    padding: 0 20px;
+  }
+
+  .topSec {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .botSec {
+    justify-content: center;
+  }
+
+  .botSec img {
+    max-width: 45%;
+    margin: 0 5px;
+  }
+}

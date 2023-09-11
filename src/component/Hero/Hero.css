@@ -1,0 +1,69 @@
+/* Default styles for larger screens */
+.hero-container {
+  display: flex;
+  flex-direction: row; /* Reverse the order for large screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 110px;
+}
+
+/* Hero left (text content) */
+.hero-left {
+  flex: 1;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-left h1 {
+  margin-bottom: 20px;
+  font-size: 52.37px;
+  font-weight: 600;
+}
+
+.hero-left p {
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.btn:hover {
+  background-color: #b66b0a;
+}
+
+/* Hero right (image) */
+.hero-right {
+  flex: 1;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* Media query for screens with a max-width of 900px */
+@media (max-width: 1140px) {
+  .hero-container {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center;
+    padding: 20px; /* Add some padding for spacing */
+  }
+
+  .hero-left,
+  .hero-right {
+    flex: none; /* Reset flex to prevent stretching */
+    max-width: 100%; /* Full width for both text and image */
+  }
+
+  .hero-left h1 {
+    font-size: 36px; /* Reduce font size for smaller screens */
+  }
+}

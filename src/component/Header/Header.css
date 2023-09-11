@@ -1,0 +1,119 @@
+.header-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 122px;
+  padding: 48px;
+}
+.header-menu {
+  display: flex;
+}
+
+.header-menu li {
+  padding: 32px;
+}
+.header-menu li a {
+  font-size: 16px;
+  font-weight: 500;
+}
+.icon img {
+  padding: 24px;
+}
+.resp-btn {
+  display: none;
+}
+
+/* Default styles for larger screens */
+.header-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 110px;
+}
+
+.header-container {
+  justify-content: space-between;
+}
+
+.resp-btn {
+  display: flex;
+  justify-content: flex-start;
+  display: none;
+}
+
+/* Media query for screens with a width of 1240px or less */
+@media screen and (max-width: 1240px) {
+  .header-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .header-container {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .resp-btn {
+    display: flex;
+    width: 150%;
+    z-index: 2;
+    font-size: 20px;
+    padding: 10px 20px; /* Add some spacing */
+    justify-content: flex-start; /* Separate menu and cart */
+  }
+  .icon {
+    display: flex;
+    padding: 10px 20px; /* Add some spacing */
+    justify-content: flex-start; /* Separate menu and cart */
+  }
+
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.99);
+    left: -100%;
+    top: 0;
+    z-index: 1;
+    transition: 0.3s;
+  }
+  .header-menu li a {
+    font-size: 25px;
+  }
+
+  .header-menu.active {
+    left: 0;
+  }
+}
+@media screen and (max-width: 1140px) {
+  .hero-right {
+    order: -1; /* Move the image container to the top */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .icon img:nth-child(1),
+  .icon img:nth-child(3) {
+    display: none; /* Hide the second and third images */
+  }
+  .header-head {
+    padding: 10px;
+    gap: 0.5rem;
+  }
+
+  .resp-btn {
+    display: flex;
+    width: 90%;
+    padding: 10px 20px; /* Add some spacing */
+    justify-content: flex-start; /* Separate menu and cart */
+  }
+}

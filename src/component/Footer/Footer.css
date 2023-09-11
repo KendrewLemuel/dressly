@@ -1,0 +1,42 @@
+/* Add styles for larger screens */
+.main-footer {
+  padding: 0 110px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.col {
+  margin: 30px;
+}
+
+.col p {
+  max-width: 300px;
+  padding-top: 10px;
+}
+
+.col ul,
+li {
+  padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .col {
+    margin: 20px 0;
+  }
+}

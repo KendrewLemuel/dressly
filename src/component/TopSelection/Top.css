@@ -1,0 +1,43 @@
+/* Default styles for larger screens */
+.selection-wrapper {
+  padding-bottom: 80px;
+}
+
+.selection-title {
+  padding: 32px 110px;
+}
+
+.img-selection {
+  display: flex;
+  margin: 0;
+  padding: 0 110px;
+  justify-content: space-between;
+}
+
+.img-selection img {
+  max-width: 30%; /* Set a maximum width for the images on larger screens */
+}
+
+/* Responsive styles for smaller screens (e.g., tablets and mobile devices) */
+@media (max-width: 768px) {
+  .selection-title {
+    padding: 16px; /* Reduce padding for smaller screens */
+    text-align: center; /* Center-align the title */
+  }
+
+  .img-selection {
+    flex-direction: column; /* Stack images vertically on smaller screens */
+    padding: 0 20px; /* Reduce horizontal padding */
+    align-items: center; /* Center-align the images */
+  }
+
+  .img-selection img {
+    max-width: 80%; /* Increase the maximum width for the images on smaller screens */
+    margin-bottom: 20px; /* Add 20px gap between stacked images */
+  }
+
+  /* Remove margin-bottom for the last image in the column */
+  .img-selection img:last-child {
+    margin-bottom: 0;
+  }
+}
